@@ -1,0 +1,27 @@
+# week11_pandas.py
+
+import pandas as pd
+
+# Loan dataset
+data = {
+    "Loan": ["Loan1", "Loan2", "Loan3"],
+    "Principal": [100000, 200000, 150000],
+    "Rate": [10, 9, 8],
+    "Tenure": [12, 24, 18]
+}
+
+df = pd.DataFrame(data)
+
+# EMI function
+def calculate_emi(p, r, t):
+    r = r / (12 * 100)
+    return p * r * (1 + r)**t / ((1 + r)**t - 1)
+
+# Add EMI column
+df["EMI"] = df.apply(lambda x: calculate_emi(x["Principal"], x["Rate"], x["Tenure"]), axis=1)
+
+print("\nLoan Data:")
+print(df)
+
+print("\nAverage EMI:", df["EMI"].mean())
+print("Max EMI:", df["EMI"].max())
