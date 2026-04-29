@@ -1,0 +1,15 @@
+# week7_encapsulation.py
+
+class Loan:
+    def __init__(self, p, r, t):
+        self.__principal = p
+        self.__rate = r
+        self.__tenure = t
+
+    def calculate_emi(self):
+        r = self.__rate / (12 * 100)
+        emi = self.__principal * r * (1 + r)**self.__tenure / ((1 + r)**self.__tenure - 1)
+        return emi
+
+loan = Loan(100000, 10, 12)
+print("EMI:", round(loan.calculate_emi(), 2))
