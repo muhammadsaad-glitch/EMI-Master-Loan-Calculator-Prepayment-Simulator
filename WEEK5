@@ -1,0 +1,16 @@
+# week5_dict.py
+
+loan = {
+    "principal": 100000,
+    "rate": 10,
+    "tenure": 12
+}
+
+print(loan)
+
+# Multiple loans
+loans = []
+loans.append(loan)
+
+for l in loans:
+    print(l["principal"], l["rate"], l["tenure"])
