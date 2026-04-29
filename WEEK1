@@ -1,0 +1,9 @@
+# week1_basic_input.py
+
+principal = float(input("Enter Loan Amount: "))
+rate = float(input("Enter Interest Rate (%): "))
+tenure = int(input("Enter Tenure (months): "))
+
+print(f"\nLoan Amount: {principal}")
+print(f"Interest Rate: {rate}%")
+print(f"Tenure: {tenure} months")
