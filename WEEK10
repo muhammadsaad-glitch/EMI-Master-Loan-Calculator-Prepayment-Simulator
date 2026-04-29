@@ -1,0 +1,11 @@
+# week10_numpy.py
+
+import numpy as np
+
+emis = [1000, 1200, 1500, 1300, 1100]
+
+arr = np.array(emis)
+
+print("Average EMI:", np.mean(arr))
+print("Max EMI:", np.max(arr))
+print("Min EMI:", np.min(arr))
