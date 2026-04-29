@@ -1,0 +1,15 @@
+# week9_exception.py
+
+def get_input():
+    try:
+        p = float(input("Loan: "))
+        r = float(input("Rate: "))
+        t = int(input("Tenure: "))
+        return p, r, t
+    except:
+        print("Invalid input")
+        return None
+
+data = get_input()
+if data:
+    print("Valid input:", data)
