@@ -1,0 +1,19 @@
+# week8_file.py
+
+import json
+
+loan = {
+    "principal": 100000,
+    "rate": 10,
+    "tenure": 12
+}
+
+# Save
+with open("loan.json", "w") as f:
+    json.dump(loan, f)
+
+# Load
+with open("loan.json", "r") as f:
+    data = json.load(f)
+
+print("Loaded:", data)
