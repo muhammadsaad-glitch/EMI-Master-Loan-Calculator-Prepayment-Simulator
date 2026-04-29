@@ -1,0 +1,24 @@
+# week3_list.py
+
+loans = []
+
+def add_loan():
+    name = input("Loan Name: ")
+    loans.append(name)
+
+def search_loan():
+    key = input("Search: ").lower()
+    for loan in loans:
+        if key in loan.lower():
+            print("Found:", loan)
+
+while True:
+    print("\n1.Add 2.Search 3.Exit")
+    ch = input()
+
+    if ch == "1":
+        add_loan()
+    elif ch == "2":
+        search_loan()
+    else:
+        break
