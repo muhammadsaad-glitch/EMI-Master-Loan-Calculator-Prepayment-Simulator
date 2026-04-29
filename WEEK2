@@ -1,0 +1,17 @@
+# week2_menu.py
+
+while True:
+    print("\n1. Enter Loan Details")
+    print("2. Exit")
+
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        p = float(input("Loan: "))
+        r = float(input("Rate: "))
+        t = int(input("Tenure: "))
+        print("Details stored.")
+    elif choice == "2":
+        break
+    else:
+        print("Invalid choice")
