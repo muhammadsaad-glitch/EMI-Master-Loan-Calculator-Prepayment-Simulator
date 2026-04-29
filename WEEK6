@@ -1,0 +1,15 @@
+# week6_oop.py
+
+class Loan:
+    def __init__(self, p, r, t):
+        self.principal = p
+        self.rate = r
+        self.tenure = t
+
+    def calculate_emi(self):
+        r = self.rate / (12 * 100)
+        emi = self.principal * r * (1 + r)**self.tenure / ((1 + r)**self.tenure - 1)
+        return emi
+
+loan1 = Loan(100000, 10, 12)
+print("EMI:", round(loan1.calculate_emi(), 2))
