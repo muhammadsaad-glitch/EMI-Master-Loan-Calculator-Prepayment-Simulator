@@ -1,0 +1,29 @@
+# week12_visualization.py
+
+import matplotlib.pyplot as plt
+
+# Sample EMI data
+loans = ["Loan1", "Loan2", "Loan3"]
+emis = [1200, 1800, 1500]
+
+# Bar Chart
+plt.figure()
+plt.bar(loans, emis)
+plt.title("EMI Comparison")
+plt.xlabel("Loans")
+plt.ylabel("EMI")
+plt.show()
+
+# Line Chart
+plt.figure()
+plt.plot(loans, emis, marker='o')
+plt.title("EMI Trend")
+plt.xlabel("Loans")
+plt.ylabel("EMI")
+plt.show()
+
+# Pie Chart
+plt.figure()
+plt.pie(emis, labels=loans, autopct='%1.1f%%')
+plt.title("EMI Distribution")
+plt.show()
