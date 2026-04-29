@@ -1,0 +1,12 @@
+# week4_functions.py
+
+def calculate_emi(p, r, t):
+    r = r / (12 * 100)
+    emi = p * r * (1 + r)**t / ((1 + r)**t - 1)
+    return emi
+
+p = float(input("Loan: "))
+r = float(input("Rate: "))
+t = int(input("Tenure: "))
+
+print("EMI:", round(calculate_emi(p, r, t), 2))
